@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>郑育航666</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            background-color: #eee;
+        }
+        /* *{
+            border: 1px solid black;
+        } */
+        .yinYing{
+            box-shadow:  10px 10px 5px 0px rgba(202, 240, 243, 0.75),-10px -10px 5px 0px rgba(255,255,255,0.5);
+        }
+        .flex{
+            display:flex;
+        }
+        .baiSe{
+            background-color: white;
+        }
+        .flex1{
+            flex: 1;
+        }
+        .column{
+            flex-direction: column;
+        }
+        .mg8{
+            margin: 8px;
+        }
+        .mgr8{
+            margin-right: 8px;
+        }
+        .mgt8{
+            margin-top: 8px;
+        }
+        .daoHang{
+            padding: 10px 20px;
+            border-bottom: 1px solid rgb(190, 190, 190); 
+            font-size: 14px;
+            color: #666;
+        }
+        @media(max-width:600px){
+            .ceBian{
+                display: none;
+            }
+            .neiRong{
+                flex-direction: column;
+            }
+            .shuJuQu{
+                flex-direction: column;
+            }
+            .youQu{
+                margin-left: 8px;
+            }
+            .shuJu{
+                margin:0 0 8px;
+                flex: auto;
+            }
+        }
+    </style>
+</head>
+<body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 200px;z-index: 2;" class="ceBian baiSe yinYing">
+        <!-- 头像栏 -->
+         <div style="padding: 10px;
+         align-items: center;
+         justify-content: center;
+         border: 1px solid #999;" 
+         class="flex">
+            <img src="https://s21.ax1x.com/2024/06/16/pkw8blT.jpg" 
+            width="40px"
+            height="40px" 
+            alt=""
+            />
+            <div style="margin-left: 10px;">郑育航</div>
+         </div>
+         <!-- 导航栏 -->
+          <div class="flex1">
+            <div class="daoHang">导航</div>
+            <div class="daoHang">导航</div>
+            <div class="daoHang">导航</div>
+            <div class="daoHang">导航</div>
+            <div class="daoHang">导航</div>
+          </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex1 flex column">
+        <!-- 头部栏 -->
+        <div style="height: 60px;z-index: 1;" class="baiSe yinYing"></div>
+        <!-- 内容区 -->
+        <div style="overflow: auto;" class=" neiRong flex">
+        <!-- 左区 -->
+            <div style="flex: 3;"class="flex column mg8">
+            <!-- 数据区 -->
+                <div class="shuJuQu flex">
+                    <!-- 数据块 -->
+                     <div style="height: 100px" class="shuJu flex1 baiSe mgr8 yinYing"></div>
+                     <div style="height: 100px" class="shuJu flex1 baiSe mgr8 yinYing"></div>
+                     <div style="height: 100px" class="shuJu flex1 baiSe mgr8 yinYing"></div>
+                     <div style="height: 100px" class="shuJu flex1 baiSe yinYing"></div>
+                </div>
+            <!-- 列表区 -->
+                <div class="flex column">
+                    <!-- 列表项 -->
+                    <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
+                    <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
+                    <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
+                    <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
+                    <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
+                    <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
+                </div>
+            </div>
+         <!-- 右区 -->
+            <div style="flex: 1" class="youQu flex column mgr8 mgt8">
+            <!-- 提示区 -->
+                <div style="height: 150px" class="baiSe yinYing"></div>
+          <!-- 消息区 -->
+                <div style="height: 300px" class="baiSe mgt8 yinYing"></div>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>
