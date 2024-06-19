@@ -8,15 +8,15 @@
 <body>
     <div class="box">
         <div class="loginBox">
-            <div>
+            <div class="textBox">
                 <span>登录</span>
                 <span>Sign in</span>
             </div>
-            <div>
+            <div class="inpBox">
                 <img src="./image/yonghu.png" alt="">
                 <input type="text" placeholder="请输入用户名">
             </div>
-            <div>
+            <div class="inpBox">
                 <img src="./image/mima.png" alt="">
                 <input type="text" placeholder="请输入密码">
             </div>
@@ -34,6 +34,42 @@
         background-image: url(./image/02.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
+    }
+    .loginBox{
+        background-color: rgba(255, 255, 255, 0.6);
+        width: 250px;
+        height: 300px;
+        padding: 25px 15px;
+        position: absolute;
+        right: 100px;
+        top: 250px
+    }
+    .textBox{
+        margin-bottom: 20px;
+    }
+    .textBox :nth-child(1){
+        color: #ff5300;
+        font-size: 20px;
+    }
+    .textBox :nth-child(2){
+        color: #b1b1b1;
+        font-size: 12px;
+    }
+    .inpBox{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background: white;
+        border-radius: 25px;
+        padding: 5px;
+        margin-bottom: 15px;
+    }
+    .inpBox img{
+        margin-right: 10px;
+    }
+    .inpBox input{
+        border: none;
+        outline: none;
     }
 </style>
   
