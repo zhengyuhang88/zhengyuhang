@@ -22,6 +22,9 @@
         .baiSe{
             background-color: white;
         }
+        .pink{
+            background-color: rgb(239, 220, 223);
+        }
         .flex1{
             flex: 1;
         }
@@ -40,9 +43,19 @@
         .daoHang{
             padding: 10px 20px;
             border-bottom: 1px solid rgb(190, 190, 190); 
-            font-size: 14px;
+            font-size: 18px;
             color: #666;
         }
+        .con1{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+        .con{
+                display: flex;
+                justify-content: flex-end;
+                
+            }
         @media(max-width:600px){
             .ceBian{
                 display: none;
@@ -60,18 +73,22 @@
                 margin:0 0 8px;
                 flex: auto;
             }
+            
         }
     </style>
 </head>
 <body class="flex">
     <!-- 侧边栏 -->
-    <div style="width: 200px;z-index: 2;" class="ceBian baiSe yinYing">
+    <div style=" width: 200px;z-index: 2;" class="ceBian pink yinYing">
         <!-- 头像栏 -->
          <div style="padding: 10px;
          align-items: center;
          justify-content: center;
-         border: 1px solid #999;" 
+         border: 1px solid #999;
+         border-radius: 50px;
+         overflow: hidden;" 
          class="flex">
+         
             <img src="https://s21.ax1x.com/2024/06/16/pkw8blT.jpg" 
             width="40px"
             height="40px" 
@@ -79,23 +96,47 @@
             />
             <div style="margin-left: 10px;">郑育航</div>
          </div>
+         <div>
+            <!-- <table class="daoHang flex">
+                <tr>
+                    <td>
+                        <a class="daoHang" href="zyh.html">影视娱乐</a>
+                        <a class="daoHang" href="">影视娱乐</a>
+                        <a class="daoHang" href="">影视娱乐</a>
+                        <a class="daoHang" href="">影视娱乐</a>
+                        <a class="daoHang" href="">影视娱乐</a>
+                    </td>
+                </tr>
+            </table> -->
+        </div>
          <!-- 导航栏 -->
-          <div class="flex1">
+          <div class="daoHang flex1 baiSe ">
+            <div class="daoHang">影视娱乐</div>
+            <div class="daoHang">装机必备</div>
+            <div class="daoHang">日常工具</div>
             <div class="daoHang">导航</div>
             <div class="daoHang">导航</div>
-            <div class="daoHang">导航</div>
-            <div class="daoHang">导航</div>
-            <div class="daoHang">导航</div>
+
           </div>
     </div>
     <!-- 主区域 -->
     <div class="flex1 flex column">
         <!-- 头部栏 -->
-        <div style="height: 60px;z-index: 1;" class="baiSe yinYing"></div>
         <!-- 内容区 -->
+        <div style="height: 60px;z-index: 1;" class="pink yinYing">
+            <table class="con">
+                <tr>
+                    <td>
+                        <a href="zyh.html">意见反馈</a>
+                        <a href="">登录/注册</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
         <div style="overflow: auto;" class=" neiRong flex">
         <!-- 左区 -->
-            <div style="flex: 3;"class="flex column mg8">
+            <div style="flex: 3;"class=" flex column mg8">
             <!-- 数据区 -->
                 <div class="shuJuQu flex">
                     <!-- 数据块 -->
