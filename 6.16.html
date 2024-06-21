@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>郑育航666</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
         body{
             margin: 0;
@@ -45,6 +46,14 @@
             border-bottom: 1px solid rgb(190, 190, 190); 
             font-size: 18px;
             color: #666;
+        }
+        .sousuokuang{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #999;
+            border-radius: 50px;
+            overflow: hidden;
         }
         .con1{
             width: 30px;
@@ -110,7 +119,7 @@
         </div>
          <!-- 导航栏 -->
           <div class="daoHang flex1 baiSe ">
-            <div class="daoHang"><a href="">影视娱乐</a></div>
+            <div class="daoHang"><a href="https://www.douyin.com/">影视娱乐</a></div>
             <div class="daoHang"><a href="">装机必备</a></div>
             <div class="daoHang"><a href="">日常工具</a></div>
             <div class="daoHang"><a href="">导航</a></div>
@@ -147,18 +156,24 @@
             <!-- 列表区 -->
                 <div class="flex column">
                     <!-- 列表项 -->
-                    <div style="height: 60px" class="baiSe mgt8 yinYing"></div>
-                    <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
-                    <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
-                    <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
-                    <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
-                    <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
+                    <div style="height: 60px" class="baiSe mgt8 yinYing sousuokuang">
+                        <input class="sousuokuang" type="text" id="query" placeholder="输入搜索关键字">
+                        <button style="cursor: pointer;" class="sousuokuang">搜索</button>
+                    </div>
+                    <div style="height: 160px" class="baiSe mgt8 yinYing sousuokuang"></div>
+                    <div style="height: 160px" class="baiSe mgt8 yinYing sousuokuang"></div>
+                    <div style="height: 160px" class="baiSe mgt8 yinYing sousuokuang"></div>
+                    <div style="height: 160px" class="baiSe mgt8 yinYing sousuokuang"></div>
+                    <div style="height: 160px" class="baiSe mgt8 yinYing sousuokuang"></div>
                 </div>
             </div>
          <!-- 右区 -->
             <div style="flex: 1" class="youQu flex column mgr8 mgt8">
+               
             <!-- 提示区 -->
-                <div style="height: 600px" class="baiSe yinYing"></div>
+                <div style="height: 600px" class="baiSe yinYing" class="container">
+                    
+                </div>
           <!-- 消息区 -->
                 <div style="height: 1000px" class="baiSe mgt8 yinYing"></div>
             </div>
