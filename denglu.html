@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>用户登录</title>
+    
 </head>
 <body>
     <div class="box">
@@ -20,8 +21,14 @@
                 <img src="./image/mima.png" alt="">
                 <input type="text" placeholder="请输入密码">
             </div>
+            <button>登录</button>
+            <div class="textBox2">
+                <span>去注册</span>
+                <span>忘记密码</span>
+            </div>
         </div>
     </div>
+    
 </body>
 <style>
   *{
@@ -71,7 +78,19 @@
         border: none;
         outline: none;
     }
+    .textBox2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+        color: #ff5300;
+    }
+    .textBox2 span{
+        border-bottom:1px solid #ff5300;
+        cursor: pointer;
+    }
 </style>
   
 </style>
+
 </html>
