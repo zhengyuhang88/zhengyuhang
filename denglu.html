@@ -1,34 +1,96 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>郑育航的html</title>
-    <style>  
-      body {
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+    
+</head>
+<body>
+    <div class="box">
+        <div class="loginBox">
+            <div class="textBox">
+                <span>登录</span>
+                <span>Sign in</span>
+            </div>
+            <div class="inpBox">
+                <img src="./image/yonghu.png" alt="">
+                <input type="text" placeholder="请输入用户名">
+            </div>
+            <div class="inpBox">
+                <img src="./image/mima.png" alt="">
+                <input type="text" placeholder="请输入密码">
+            </div>
+            <button>登录</button>
+            <div class="textBox2">
+                <span>去注册</span>
+                <span>忘记密码</span>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<style>
+  *{
         margin: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <div style="background-color:#f1f1f1;text-align:center;padding:40px;">
-      <img src='https://s21.ax1x.com/2024/06/16/pkw8blT.jpg' alt="郑育航" width="100px" height="100px">
-    </div>
-    <div style="max-width: 700px;margin: 30px auto;padding: 15px;line-height: 1.7;">
-      <p>qq:3331856544</p>
-      <p>我的网站</p>
-      <p>我的网站</p>
-      <p>我的网站</p>
-      <p>我的网站</p>
-      <p>我的网站</p>
-    </div>
-    <div style="background-color: #f1f1f1;
-    text-align: center;
-    padding: 40px;
-    font-size: 12px;">
-    <p>我的网站</p>
-    <a href="http://zhengyuhang.com/">友情链接</a>
-    </div>
-  </body>
-</html>
+        padding: 0;
+    }
+    .box{
+        width: 100%;
+        height: 100vh;
+        background-image: url(./image/02.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    .loginBox{
+        background-color: rgba(255, 255, 255, 0.6);
+        width: 250px;
+        height: 300px;
+        padding: 25px 15px;
+        position: absolute;
+        right: 100px;
+        top: 250px
+    }
+    .textBox{
+        margin-bottom: 20px;
+    }
+    .textBox :nth-child(1){
+        color: #ff5300;
+        font-size: 20px;
+    }
+    .textBox :nth-child(2){
+        color: #b1b1b1;
+        font-size: 12px;
+    }
+    .inpBox{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background: white;
+        border-radius: 25px;
+        padding: 5px;
+        margin-bottom: 15px;
+    }
+    .inpBox img{
+        margin-right: 10px;
+    }
+    .inpBox input{
+        border: none;
+        outline: none;
+    }
+    .textBox2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+        color: #ff5300;
+    }
+    .textBox2 span{
+        border-bottom:1px solid #ff5300;
+        cursor: pointer;
+    }
+</style>
+  
+</style>
 
+</html>
