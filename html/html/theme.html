@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style2.css">
+</head>
+<body>
+    <div class="menu">
+        <div class="menu-header">
+            <h2 class="menu-header-title">Theme</h2>
+            <div class="theme-switcher">
+                <input type="radio" name="themes" id="light-theme">
+                <label for="light-theme">
+                    <ion-icon name="sunny-outline"></ion-icon>
+                    <span>Light</span>
+                </label>
+                <input type="radio" name="themes" id="dark-theme">
+                <label for="dark-theme">
+                    <ion-icon name="moon-outline"></ion-icon>
+                    <span>Dark</span>
+                </label>
+                <input type="radio" name="themes" id="black-theme">
+                <label for="black-theme">
+                    <ion-icon name="contrast-outline"></ion-icon>
+                    <span>Black</span>
+                </label>
+                <span class="slider"></span>
+            </div>
+        </div>
+        <div class="menu-body">
+            <a href="#"><ion-icon name="settings-outline"></ion-icon>Account setting</a>
+            <a href="#"><ion-icon name="chatbubble-ellipses-outline"></ion-icon>Give Feedback</a>
+            <a href="#"><ion-icon name="alert-circle-outline"></ion-icon>About</a>
+            <a href="#"><ion-icon name="mail-outline"></ion-icon>Support</a>
+        </div>
+    </div>
+    <script>
+        var html=document.getElementsByTagName('html')
+        var radios=document.getElementsByName('themes')
+        for(i=0;i<radios.length;i++){
+            radios[i].addEventListener('change',function(){
+                html[0].classList.remove(html[0].classList.item(0))
+                html[0].classList.add(this.id)
+            })
+        }
+    </script>
+</body>
+</html>

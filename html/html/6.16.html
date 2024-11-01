@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<link rel="stylesheet" href="../css/style2.css">
+<title>郑育航666</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+     <link rel="stylesheet" href="/css/bootstrap.min.css">
+     <link rel="stylesheet" href="/css/style.css">
+     
+    <style>
+        .vertical-text {
+        writing-mode: vertical-rl; /* 垂直从右到左 */
+        /* 或者使用 vertical-lr 来从左到右 */
+        text-align: right; /* 对于从右到左的文本 */
+        /* 或者使用 text-align: left; 对于从左到右的文本 */
+    }
+        .box{
+            width: 1000px;
+            height: 460px;
+            position: relative;
+        }
+        .box-img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: all 1.5s;
+        }
+        .box-img:nth-child(1){
+            opacity: 1;
+        }
+        .box-left{
+            position: absolute;
+            width: 35px;
+            height: 70px;
+            color: #ccc;
+            top: 195px;
+            border-radius: 0 5px 5px 0;
+            text-align: center;
+            line-height: 70px;
+            font-size: 27px;
+            cursor: pointer;
+        }
+        .box-left:hover{
+            background-color: #6e071650;
+            color: #fff;
+        }
+        .box-right{
+            position: absolute;
+            width: 35px;
+            height: 70px;
+            color: #ccc;
+            top: 195px;
+            border-radius:5px 0 0 5px;
+            text-align: center;
+            line-height: 70px;
+            font-size: 27px;
+            right: 0;
+            cursor: pointer;
+        }
+        .box-right:hover{
+            background-color: #6e071650;
+            color: #fff;
+        }
+        .box-zhiding>ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .box-zhiding li{
+            width: 14px;
+            height: 14px;
+            border-radius: 100%;
+            background-color: #ccc;
+            float: left;
+            margin-right: 10px;
+        }
+        .box-zhiding li:hover{
+            background-color: #fff;
+        }
+        .box-zhiding li:nth-child(1){
+            background-color: #fff;
+        }
+        .box-zhiding{
+            position: absolute;
+            bottom: 50px;
+            right: 100px;
+        }
+        body{
+            margin: 0;
+            height: 100vh;
+            background-color: #eee;
+        }
+        /* *{
+            border: 1px solid black;
+        } */
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+        /* .yinYing{*/
+        /*    box-shadow:  10px 10px 5px 0px rgba(202, 240, 243, 0.75),-10px -10px 5px 0px rgba(255,255,255,0.5);*/
+        /*}*/
+        .flex{
+            display:flex;
+        }
+        .baiSe{
+            background-color: white;
+            opacity: 1;
+            border-radius: 15px;
+        }
+        /* .pink{
+            background-color: rgb(239, 220, 223);
+        } */
+        .green{
+            background-color: rgb(222, 247, 222);
+        }
+        .flex1{
+            border-radius: 15px;
+            height: 800px  ;
+        }
+        .flex2{
+            flex: 1;
+            border-radius: 15px;
+        }
+        .column{
+            flex-direction: column;
+
+        }
+        .mg8{
+            margin: 8px;
+        }
+        .mgr8{
+            margin-right: 8px;
+        }
+        .mgt8{
+            margin-top: 8px;
+        }
+         
+        
+        .daoHang{
+            padding: 10px 20px;
+            border-bottom: 1px solid rgb(190, 190, 190);
+            border-radius: 15px;
+            font-size: 18px;
+            color: #666;
+            border: none; /* 去掉边框 */
+            text-decoration: none;
+            cursor: pointer; /* 鼠标悬停时显示指针 */
+            transition: background-color 0.3s, transform 0.3s; /* 添加过渡效果 */
+        }
+        .daoHang:hover{
+            background: #a6e1ec; /* 悬停时的背景颜色 */
+            transform: scale(1.1); /* 放大效果 */
+        }
+        .underline{
+            text-decoration: none;
+            border: none;
+            display: flex;
+            justify-content: left;
+
+        }
+        .sousuokuang{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            /*border: 2px solid #999;*/
+            border-radius: 50px;
+            overflow: hidden;
+        }
+        .sousuokuang1{
+            border: 2px solid #5bc0de;
+        }
+
+        .con1{
+            width: 30px;
+        }
+        .con{
+            display: flex;
+            justify-content: left;
+            opacity:1;
+            margin-right: 40px;
+
+            }
+        .image-link {
+            border: 2px solid #000; /* 设置边框颜色和粗细 */
+            width: 35px; /* 设置图像宽度 */
+            height: auto; /* 保持图像比例 */
+            border-radius: 15px;
+            border: none; /* 去掉边框 */
+            cursor: pointer; /* 鼠标悬停时显示指针 */
+            transition: background-color 0.3s, transform 0.3s; /* 添加过渡效果 */
+        }
+        .image-link:hover{
+            background-color: #0056b3; /* 悬停时的背景颜色 */
+            transform: scale(1.1); /* 放大效果 */
+        }
+        .text-below-image {
+            font-size: 10px; /* 设置字体大小 */
+            color: #0056b3; /* 设置文字颜色 */
+            display: flex;
+            justify-content: left;/*文字相对图片居中*/
+            /*text-align: center;*/
+        }
+        @media(max-width:600px){
+            .ceBian{
+                display: none;
+            }
+            .neiRong{
+                flex-direction: column;
+            }
+            .shuJuQu{
+                flex-direction: column;
+            }
+            .youQu{
+                margin-left: 8px;
+            }
+            .shuJu{
+                margin:0 0 8px;
+                flex: auto;
+            }
+            
+        }
+    </style>
+</head>
+<body class="flex">
+    <!-- 侧边栏 -->
+    <div style=" width: 200px;z-index: 2;" class="ceBian ">
+        <!-- 头像栏 -->
+         <div style="padding: 10px;
+         align-items: center;
+         justify-content: center;
+         border: 1px solid #999;
+         border-radius: 50px;
+         overflow: hidden;" 
+         class="flex">
+
+            <img src="https://s21.ax1x.com/2024/06/16/pkw8blT.jpg" 
+            width="30px"
+            height="30px"
+            alt=""
+            />
+             <td width="120px"><a href="denglu.html" >登录/注册</a></td>
+
+<!--             <div style="margin-left: 10px;">郑育航</div>-->
+         </div>
+
+         <!-- 导航栏 -->
+
+          <div class=" flex1 green ">
+            <div class="daoHang"><a href="./111.html" class="underline">影视娱乐</a></div>
+            <div class="daoHang"><a href="" >装机必备</a></div>
+            <div class="daoHang"><a href="" >好用工具</a></div>
+            <div class="daoHang"><a href="" >开发软件</a></div>
+            <div class="daoHang"><a href="" >留言界面</a></div>
+
+          </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex2 flex column ">
+        <!-- 头部栏 -->
+        <!-- 内容区 -->
+        <div style="height: 60px;z-index: 1;" class="pink yinYing">
+            <div class="con">
+                <tr>
+                    <td>
+<!--                    <td width="700px" class="biaoti">大学生资源共享平台</td>-->
+                        <a href="https://xinghuo.xfyun.cn/desk" target="_blank" >
+                            <!--                target以新窗口打开-->
+                            <img src="../image/星火AI.png" alt="Description of the image" class="image-link con" >
+                            <span class="text-below-image">星火AI</span>
+                        </a>
+                        <a href="index.html" target="_blank" >
+                            <!--                target以新窗口打开-->
+                            <img src="../image/意见反馈.jpg" alt="Description of the image" class="image-link con">
+                            <span class="text-below-image">意见反馈</span>
+                        </a>
+<!--                    <div width="300px"><a href="index.html" class="underline">意见反馈</a></div>-->
+
+<!--                <td width="120px"><a href="denglu.html" class="underline">登录/注册</a></td>-->
+                    </td>
+                </tr>
+            </div>
+        </div>
+
+        <div style="overflow: auto;" class=" neiRong flex">
+        <!-- 左区 -->
+            <div style="flex: 3;"class=" flex column mg8">
+            <!-- 数据区 -->
+                
+            <!-- 列表区 -->
+                <div class="flex column">
+                    <!-- 列表项 -->
+                    <div style="height: 60px" class="baiSe mgt8 yinYing sousuokuang">
+                        <input style="width: 450px; height: 45px;" class="sousuokuang sousuokuang1" type="text" id="query" placeholder="请输入搜索关键字" >
+                        <button style="cursor: pointer;" class="sousuokuang">搜索</button>
+                    </div>
+                    <div style="height: 400px" class="baiSe mgt8 yinYing sousuokuang">
+                        <div class="box">
+                            <div class="box-img"><img src="../image/轮播1.jpeg" width="1000" height="460"></div>
+                            <div class="box-img"><img src="../image/轮播2.jpeg" width="1000" height="460"></div>
+                            <div class="box-img"><img src="../image/轮播3.jpg" width="1000" height="460"></div>
+                            <div class="box-left">&lt;</div>
+                            <div class="box-right">&gt;</div>
+                            <div class="box-zhiding">
+                                <ul>
+                                    <li class="botton"></li>
+                                    <li class="botton"></li>
+                                    <li class="botton"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="height: 200px" class="baiSe mgt8  sousuokuang"></div>
+                    <div style="height: 200px" class="baiSe mgt8  sousuokuang"></div>
+                    <div style="height: 200px" class="baiSe mgt8  sousuokuang"></div>
+                </div>
+            </div>
+         <!-- 右区 -->
+            <div style="flex: 1" class="youQu flex column mgr8 mgt8">
+               
+            <!-- 提示区 -->
+             <!-- 动态切换设置栏背景色按钮 -->
+                <div style="height: 600px" class="baiSe ">
+                    
+
+                </div>
+          <!-- 消息区 -->
+                <div style="height: 1000px" class="baiSe mgt8 ">
+                    <div class="vertical-text" style="font-size:25px;;font-weight: 800; text-shadow:2px 2px 0 #ccc,4px 4px 0 #bbb,6px 6px 0 #aaa,8px 8px 0 #999;">我们生在红旗下，长在春风里      《觉醒年代》</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/js/jquery-3.7.1.js" ></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- 轮播图 -->
+    <script type="text/javascript">
+
+    $(function(){
+        var index=0;//标记当前图片索引
+        var f;
+        dingshiqi();
+            function dingshiqi(){
+                f=setInterval(function(){
+                if(index==$(".box-img").length-1){
+                    index=0;
+                    $(".box-img").css("opacity","0");
+                    $(".box-img").eq(index).css("opacity","1");
+                    $(".box-img").css("opacity","0");
+                $(".box-img").eq(index).css("opacity","1");
+                $(".botton").css("background-color","#ccc");
+                $(".botton").eq(index).css("background-color","#fff");
+                }else{
+                    index++;
+                    $(".box-img").css("opacity","0");
+                    $(".box-img").eq(index).css("opacity","1");
+                    $(".box-img").css("opacity","0");
+                $(".box-img").eq(index).css("opacity","1");
+                $(".botton").css("background-color","#ccc");
+                $(".botton").eq(index).css("background-color","#fff");
+                }
+            },4000)
+            }
+            
+            $(".box-left").click(function(){
+                clearInterval(f);
+                if(index==0){
+                    index=$(".box-img").length-1;
+                    $(".box-img").css("opacity","0");
+                    $(".box-img").eq(index).css("opacity","1");
+                    $(".box-img").css("opacity","0");
+                $(".box-img").eq(index).css("opacity","1");
+                $(".botton").css("background-color","#ccc");
+                $(".botton").eq(index).css("background-color","#fff");
+                    dingshiqi();
+                }else{
+                    index--;
+                    $(".box-img").css("opacity","0");
+                    $(".box-img").eq(index).css("opacity","1");
+                    $(".box-img").css("opacity","0");
+                $(".box-img").eq(index).css("opacity","1");
+                $(".botton").css("background-color","#ccc");
+                $(".botton").eq(index).css("background-color","#fff");
+                    dingshiqi();
+                }
+                
+            })
+            $(".box-right").click(function(){
+                clearInterval(f);
+                if(index==$(".box-img").length-1){
+                    index=0;
+                    $(".box-img").css("opacity","0");
+                    $(".box-img").eq(index).css("opacity","1");
+                    $(".box-img").css("opacity","0");
+                $(".box-img").eq(index).css("opacity","1");
+                $(".botton").css("background-color","#ccc");
+                $(".botton").eq(index).css("background-color","#fff");
+                    dingshiqi();
+                }else{
+                    index++;
+                    $(".box-img").css("opacity","0");
+                    $(".box-img").eq(index).css("opacity","1");
+                    $(".box-img").css("opacity","0");
+                $(".box-img").eq(index).css("opacity","1");
+                $(".botton").css("background-color","#ccc");
+                $(".botton").eq(index).css("background-color","#fff");
+                    dingshiqi();
+                }
+                
+            })
+            $(".botton").click(function(){
+                clearInterval(f);
+                var indexx= $(this).index();
+                index=indexx;
+                $(".box-img").css("opacity","0");
+                $(".box-img").eq(index).css("opacity","1");
+                $(".botton").css("background-color","#ccc");
+                $(".botton").eq(index).css("background-color","#fff");
+                dingshiqi();
+            })
+        })
+    </script>
+    
+</body>
+</html>

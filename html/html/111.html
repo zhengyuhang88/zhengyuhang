@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>影视娱乐</title>
+    <style>
+        .image-link {
+            border: 2px solid #000; /* 设置边框颜色和粗细 */
+            width: 50px; /* 设置图像宽度 */
+            height: auto; /* 保持图像比例 */
+            border-radius: 15px;
+            border: none; /* 去掉边框 */
+            cursor: pointer; /* 鼠标悬停时显示指针 */
+            transition: background-color 0.3s, transform 0.3s; /* 添加过渡效果 */
+        }
+        .image-link:hover{
+            background-color: #0056b3; /* 悬停时的背景颜色 */
+            transform: scale(1.1); /* 放大效果 */
+        }
+        ul {
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none; /* 移除列表项前的默认标记 */
+            padding: 0; /* 移除内边距 */
+            gap: 2015px; /* 设置图像之间的间距 */
+        }
+        li {
+            display: flex;
+            justify-content: center; /* 水平居中对齐 */
+        }
+        a{
+            margin-right: 50px;
+            text-decoration: none; /* 去掉下划线 */
+            color: inherit; /* 继承父元素的颜色 */
+        }
+        .back {
+            display: flex;
+            justify-content: center; /* 水平居中对齐 */
+            align-items: center; /* 垂直居中对齐 */
+            height: 100px; /* 设置高度 */
+            width: 100px; /* 设置宽度 */
+            margin: 20px auto; /* 设置外边距，使按钮居中 */
+        }
+        .back2{
+            display: flex;
+            justify-content: center;
+        }
+        button {
+            border: none; /* 去掉边框 */
+            padding: 10px 20px; /* 设置内边距 */
+            font-size: 16px; /* 设置字体大小 */
+            color: #fff; /* 设置文字颜色 */
+            background-color: #007BFF; /* 设置背景颜色 */
+            border-radius: 5px; /* 设置圆角 */
+            cursor: pointer; /* 鼠标悬停时显示指针 */
+            transition: background-color 0.3s, transform 0.3s; /* 添加过渡效果 */
+        }
+        button:hover {
+            background-color: #0056b3; /* 悬停时的背景颜色 */
+            transform: scale(1.1); /* 放大效果 */
+        }
+        .container {
+            border: 2px solid #000; /* 设置容器的边框 */
+            padding: 20px; /* 设置内边距 */
+            max-width: 300px; /* 设置最大宽度 */
+            margin: 20px auto; /* 设置外边距，使容器居中 */
+            border-radius: 10px; /* 设置圆角 */
+        }
+        .text-below-image {
+            font-size: 10px; /* 设置字体大小 */
+            color: #5bc0de; /* 设置文字颜色 */
+            display: flex;
+            justify-content: center;/*文字相对图片居中*/
+            /*text-align: center;*/
+        }
+    </style>
+</head>
+<body>
+<div class="back">
+    <button class="back2">
+        <a href="./6.16.html">back</a>
+    </button>
+</div>
+<div class="container">
+    <ul>
+        <li>
+            <a href="https://douyin.com" target="_blank">
+<!--                target以新窗口打开-->
+                <img src="../image/抖音.jpg" alt="Description of the image" class="image-link">
+                <span class="text-below-image">抖音</span>
+            </a>
+            <a href="https://yinghe.app/" target="_blank">
+                <img src="../image/硬核指南.png" alt="Description of the image" class="image-link">
+                <span class="text-below-image">硬核指南</span>
+            </a>
+            <a href="https://cn.czmanga.com/" target="_blank">
+            <img src="../image/包子动漫.jpg" alt="Description of the image" class="image-link">
+                <span class="text-below-image">包子动漫</span>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

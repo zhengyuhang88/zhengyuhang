@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+
+</head>
+<body>
+<div class="box">
+    <div class="loginBox">
+        <div class="textBox">
+            <span>注册</span>
+        </div>
+        <form action="../php/zhuce.php" method="post">
+            <div class="inpBox">
+                <label for="username">用户名:</lab el>
+                <input type="text" name="username" placeholder="请输入用户名" required>
+            </div>
+            <div class="inpBox">
+                <label for="password">密码:</label>
+            <input type="password" name="password" placeholder="请输入密码" required>
+    </div>
+            <div class="inpBox">
+                <label for="confirm_password">确认密码:</label>
+                <input type="password" name="confirm_password" placeholder="请确认密码" required>
+            </div>
+            <button type="submit" class="button1">注册</button>
+        </form>
+        <div class="textBox2">
+            <a href="/html/html/denglu.html">已有账号了，去登录吧</a>
+        </div>
+    </div>
+</div>
+
+</body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .button1{
+        width: 50%;
+        height: 30px;
+        border: 2px;
+        line-height: 15px;
+        color:#ff5300;
+        font-size: 15px;
+        padding: 3px 3px 3px 3px;
+        box-shadow:none;
+        border-radius: 10px;
+        position: relative;
+        left: 26%;
+        cursor: pointer;
+    }
+    .box{
+        width: 100%;
+        height: 100vh;
+        background-image: url(../image/02.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    .loginBox{
+        background-color: rgba(255, 255, 255, 0.6);/*透明度*/
+        width: 250px;
+        height: 300px;
+        padding: 25px 15px;
+        position: absolute;
+        right: 100px;
+        top: 250px
+    }
+    .textBox{
+        margin-bottom: 20px;
+    }
+    .textBox :nth-child(1){
+        color: #ff5300;
+        font-size: 20px;
+    }
+    .textBox :nth-child(2){
+        color: #b1b1b1;
+        font-size: 12px;
+    }
+    .inpBox{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background: white;
+        border-radius: 25px;
+        padding: 5px;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+    .inpBox img{
+        margin-right: 10px;
+    }
+    .inpBox input{
+        border: none;
+        outline: none;
+    }
+    .textBox2{
+        position: relative;
+        top: 25%;
+        left: 50px;
+        font-size: 15px;
+    }
+
+</style>
+
+</style>
+</html>
